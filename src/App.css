@@ -39,23 +39,29 @@
   padding: 0;
 }
 
-nav{display: flex;justify-content: center;gap: 2rem;}
-ul{display: flex;align-items: center;gap: 2rem;}
-ul li{list-style: none;}
-ul li a{text-decoration: none; font-family:'KarlaMedium'; font-size: 20px; color: black;}
 
-footer{display: flex;gap: 2rem;justify-content: center;}
+nav{display: flex;justify-content: center;gap: 2rem; align-items: center; padding: 2rem 0;}
+nav ul{display: flex;align-items: center;gap: 2rem;}
+nav ul li{list-style: none;}
+nav ul li a{text-decoration: none; font-family:'KarlaMedium'; font-size: 20px; color: black; transition: 0.5s;}
+nav ul li a:hover{color:#F4CE14;border-bottom: 4px #F4CE14 solid;transition: 0.5s;}
+.hide{top:70px}
+
+
+footer{display: flex;gap: 2rem;justify-content: center;padding: 2rem 0;}
 .footer-links{display: flex;flex-direction: column;gap: .5rem;}
-.footer-links a{text-decoration: none; font-family:'KarlaMedium'; font-size: 20px; color: black;}
+.footer-links a{text-decoration: none; font-family:'KarlaMedium'; font-size: 20px; color: black; transition: 0.5s;}
 .footer-links h2{font-family: 'KarlaExtraBold';font-size: 20px;}
+.footer-links a:hover{color: #F4CE14;}
 
-.hero-section{display: flex;justify-content: center; align-items: center;background-color: #485E57;margin-bottom: 7rem}
+.hero-section{display: flex;justify-content: center; align-items: center;background-color: #485E57;margin-bottom: 7rem;}
 .text-section{display: flex; flex-direction: column;}
 .text-section h2{font-family: 'MarkaziMedium'; font-size: 64px;color:#F4CE14}
 .text-section h3{font-family: 'MarkaziRegular'; font-size: 40px;color:white;}
 .text-section p{width: 50%;font-family: 'KarlaMedium'; font-size: 18px;color:white;}
 .text-section button{width: 200px; height:60px;font-family: 'KarlaMedium'; font-size: 18px;
-  color:black; background-color: #F4CE14; border-radius: 16px; margin-top: 1rem;border: none;}
+  color:black; background-color: #F4CE14; border-radius: 16px; margin-top: 1rem;border: none; transition: 0.5s;}
+.text-section button:hover{background-color:#EDEFEE}
 .hero-image img{width: 100%;max-width: 400px;height: auto; padding: 2rem 0;
 position: relative; top: 7rem; border-radius: 8%;}
 
@@ -63,8 +69,9 @@ position: relative; top: 7rem; border-radius: 8%;}
 .specials-title{display: flex; gap: 5rem}
 .specials-title h2{font-family: 'KarlaExtraBold'; font-size: 40px;}
 .specials-title button{width: 200px; height:60px;font-family: 'KarlaMedium'; font-size: 18px;
-  color:black; background-color: #F4CE14; border-radius: 16px; border: none;}
-.specials-items{display: flex; gap:2rem}
+  color:black; background-color: #F4CE14; border-radius: 16px; border: none;transition: 0.5s;}
+.specials-title button:hover{background-color:#EDEFEE}
+.specials-items{display: flex; gap:2rem;flex-wrap: wrap; justify-content: center;}
 
 .card{ display: flex;flex-direction: column ;width: 264px; gap: 1rem; background-color: #EDEFEE;
 padding-bottom: 2rem; border-radius: 16px;}
@@ -78,3 +85,77 @@ padding-bottom: 2rem; border-radius: 16px;}
 .card-delivery{display: flex; align-items: center;}
 .card-delivery img{width: 20px;margin-left: 1rem;}
 .card-delivery a{text-decoration: none; color: black;}
+
+.testimonials-section{background-color: #485E57;display: flex; flex-direction: column; justify-content: center;
+align-items: center; padding-top: 5rem; padding-bottom: 3rem;gap:2rem}
+.testimonials-section h2{font-family: 'MarkaziMedium';font-size: 38px;}
+.testimonials{display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;align-items: center;height: 30vh;}
+.testimonial-card{display: flex;flex-direction: column; justify-content: center; gap:1rem;padding:2rem;
+  width: 200px; height: 175px;background-color: #EDEFEE; border-radius: 10px;}
+.testimonial-profile img{width: 80px; height: 80px; border-radius: 5px;}
+.testimonial-profile h2{font-family: 'KarlaBold';font-size: 18px;}
+.testimonial-card p{font-family: 'KarlaRegular';font-size: 16px;}
+.testimonial-card h2{font-size: 20px;}
+.testimonial-profile{display: flex; align-items: center;gap:1rem;}
+
+.about-section{display: flex; justify-content: center; padding: 8rem 0; gap:2rem;border-bottom: 2px solid black;}
+.about-text{width: 30%;}
+.about-text h2{font-family: 'MarkaziMedium'; font-size: 64px;}
+.about-text h3{font-family: 'MarkaziRegular'; font-size: 40px;}
+.about-text p{font-family: 'KarlaMedium'; font-size: 18px;}
+.img-2{position: relative;right: 20%;}
+.img-1{position: relative;top: 20%;}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hamburger */
+  .hamburger{display: flex; flex-direction: column; gap: 8px;cursor: pointer;padding: 10px;margin-right: -10px;}
+  .lines{display: block;background-color: black;height: 2px;width: 35px;}
+  .lines-rotate{border-radius: 5px;}
+  nav{position: relative; padding: 15px 20px;}
+  ul{width: 100%;flex-direction: column;justify-content: center;align-items: center;position: absolute;top:-400px
+  ;right:0;background-color: #EDEFEE;padding: 35px 0;border-radius: 0 0 5px 5px;box-shadow: 0px 5px 5px #719b8d}
+  li a{color:#F4CE14}
+  li{text-align: center; width: 90vw;}
+  li a:hover{color:red; border: none; letter-spacing: 3px;}
+  /* CSS rules for tablets */
+  nav{padding:0}
+  .hero-section{flex-direction: column;}
+  .hero-image img{width: 100%;max-width: 350px;height: auto; padding: 2rem 0;
+    position: static; border-radius: 6%;}
+  .text-section{align-items: center;}
+  .specials-title{flex-direction: column; align-items:center ;}
+  .testimonials{height: 50vh;}
+  .about-section{flex-direction: column; align-items: center;}
+  .about-text{width: 70%;}
+  .about-image{display: flex; flex-direction: column; gap:1rem;}
+  .img-2{position: static; width: 500px;}
+  .img-1{position: static; width: 500px;}
+}
+
+@media (max-width: 767px) {
+  /* Hamburger */
+  .hamburger{display: flex; flex-direction: column; gap: 8px;cursor: pointer;padding: 10px;margin-right: -10px;}
+  .lines{display: block;background-color: black;height: 2px;width: 35px;}
+  .lines-rotate{border-radius: 5px;}
+  nav{position: relative; padding: 15px 20px;}
+  ul{width: 100%;flex-direction: column;justify-content: center;align-items: center;position: absolute;top:-400px
+  ;right:0;background-color: #EDEFEE;padding: 35px 0;border-radius: 0 0 5px 5px;box-shadow: 0px 5px 5px #719b8d}
+  li a{color:#F4CE14}
+  li{text-align: center; width: 90vw;}
+  li a:hover{color:red; border: none; letter-spacing: 3px;}
+
+  /* CSS rules for mobile devices */
+  nav{padding:0}
+  .hero-section{flex-direction: column;}
+  .hero-image img{width: 100%;max-width: 300px;height: auto; padding: 2rem 0;
+    position: static; border-radius: 6%;}
+  .text-section{align-items: center;}
+  .specials-title{flex-direction: column; align-items:center;}
+  .specials-title h2{width: 40%;}
+  .testimonials{height: 150vh;}
+  .about-section{flex-direction: column; align-items: center; padding:3rem;}
+  .about-text{width: 70%;}
+  .about-image{display: flex; flex-direction: column; gap:1rem;}
+  .img-2{position: static; width: 300px;}
+  .img-1{position: static; width: 300px;}
+  footer{flex-direction: column; align-items: center;}
+}
