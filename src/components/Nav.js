@@ -3,6 +3,7 @@ import { ReactComponent as ReactLogo } from '../images/Logo.svg'
 import { Routes, Route, Link } from 'react-router-dom';
 import BookingPage from './BookingPage';
 import Header from './Header';
+import ConfirmedBooking from './ConfirmedBooking';
 
 let hamburger = document.querySelector('.hamburger');
 let navLinks = document.getElementById('nav-links');
@@ -19,6 +20,17 @@ let links = document.querySelectorAll('.links');
 //     })
 // }
 
+const handleClick = (anchor) => () => {
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+};
+
 function Nav() {
     return (
         <>
@@ -33,7 +45,7 @@ function Nav() {
                 </div>
                 <ul id='nav-links'>
                     <li><a href='#' className='links'><Link to='/littlelemon' className='nav-link'>Home</Link></a></li>
-                    <li><a href='#' className='links'>About</a></li>
+                    <li><a href='#about' className='links' onClick={handleClick("about")}>About</a></li>
                     <li><a href='#' className='links'>Menu</a></li>
                     <li><a href='#' className='links'><Link to='/reservations' className='nav-link'>Reservations</Link></a></li>
                     <li><a href='#' className='links'>Order Online</a></li>
@@ -43,6 +55,8 @@ function Nav() {
             <Routes>
                 <Route path='/littlelemon' element={<Header />} />
                 <Route path='/reservations' element={<BookingPage />} />
+                <Route path='/reservation-confirmed' element={<ConfirmedBooking />} />
+
             </Routes>
         </>
     )

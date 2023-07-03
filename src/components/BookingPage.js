@@ -1,6 +1,6 @@
 import React,{useEffect, useReducer, useState} from 'react'
 import BookingForm from './BookingForm'
-
+import { fetchAPI,submitAPI } from './Api'
 const date = '02/02/2023'
 
 const reducer = (state,action) => {
@@ -17,7 +17,7 @@ function BookingPage() {
     const updateTimes = () => {
         return availableTimes
     }
-    const initializeTimes = () => {
+    const initializeTimes = (date) => {
         setAvailableTimes([
             "17:00",
             "18:00",
